@@ -1,15 +1,19 @@
 
 import './App.css'
-import { Link, Routes, Route } from "react-router-dom"
-import LoginPage from './auth/page/LoginPage'
+import { BrowserRouter } from "react-router-dom"
 import { AppRouter } from './router/AppRouter'
+import { Provider } from 'react-redux'
+import { store } from './store/store';
 
 
 function App() {
 
   return (
-
-    <AppRouter />
+    <Provider store={store}>
+      <BrowserRouter>
+        <AppRouter />
+      </BrowserRouter>
+    </Provider>
   )
 }
 
