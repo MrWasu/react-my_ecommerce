@@ -9,7 +9,7 @@ interface AuthState {
 export const authSlice = createSlice({
     name: 'auth',
     initialState: {
-        status: 'authenticated', // 'authenticated','not-authenticated', 'checking'
+        status: 'not-authenthicated', // 'authenticated','not-authenticated', 'checking'
         user: {},
         errorMessage: undefined,
     },
