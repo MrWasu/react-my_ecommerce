@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux'
 import './navbar.css'
 import { onLogin, onLogout } from '../../../store/auth/authSlice';
+import BasicModal from './modal/Modal';
 
 export const Navbar = () => {
 
@@ -26,6 +27,8 @@ export const Navbar = () => {
       <h3>Status: {currentStatus}</h3>
 
       <button onClick={toggleAuthStatus} >Cambiar Sesión</button>
+
+      <BasicModal></BasicModal>
 
     </div>
   )

@@ -20,6 +20,7 @@ const ShopPage = () => {
 
                 <div className="content">
                     <h1>Shop page</h1>
+                    
                 </div>
             </div>
         <Footer/>
