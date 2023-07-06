@@ -1,7 +1,10 @@
 import { useDispatch, useSelector } from 'react-redux'
+
 import './navbar.css'
 import { onLogin, onLogout } from '../../../store/auth/authSlice';
-import BasicModal from './modal/Modal';
+import {BasicModal} from './modal/Modal';
+import { LoginComponent } from '../../../auth/Components/LoginComponent';
+
 
 export const Navbar = () => {
 
@@ -10,9 +13,9 @@ export const Navbar = () => {
   const currentStatus = useSelector((state: any) => state.auth.status);
 
   const toggleAuthStatus = () => {
-    // Obtener el estado actual de autenticación
 
-    // Cambiar el estado según el estado actual
+
+    //! Test, borrar
     if (currentStatus === 'authenticated') {
       dispatch(onLogout('Optional error message')); // Cambiar a 'not-authenticated'
     } else {
@@ -28,10 +31,11 @@ export const Navbar = () => {
 
       <button onClick={toggleAuthStatus} >Cambiar Sesión</button>
 
-      <BasicModal></BasicModal>
+      <BasicModal>
+       <LoginComponent/>
+      </BasicModal>
 
     </div>
   )
-
 }
 
