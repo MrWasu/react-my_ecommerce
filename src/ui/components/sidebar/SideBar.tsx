@@ -57,6 +57,13 @@ export const SideBar = ({ drawerWidth = 240 }) => {
                     >
                         Login
                     </NavLink>
+
+                    <NavLink
+                        className={({ isActive }) => `nav-item nav-link mx-3 ${isActive ? 'active' : ''}`}
+                        to="/product"
+                    >
+                        ProductPage
+                    </NavLink>
                 </List>
 
             </Drawer>

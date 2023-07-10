@@ -6,14 +6,16 @@ import CheckoutPage from '../checkout/pages/CheckoutPage';
 import PaymentPage from '../payment/PaymentPage';
 import UserPanelPage from '../user-panel/UserPanelPage';
 import { AuthRoutes } from '../auth/routes/AuthRoutes';
+import { ProductPage } from '../products/page/ProductPage';
+import { productData } from '../products/types/ProductTypes';
 
 
 export const AppRouter = () => {
 
     const currentStatus = useSelector((state: any) => state.auth.status);
-   
+
     let logged = false;
-   
+
     if (currentStatus === 'authenticated') logged = true;
 
 
@@ -45,6 +47,11 @@ export const AppRouter = () => {
 
             <Route path="/auth/*" element={<AuthRoutes />} />
 
+            <Route
+                path="/product"
+                element={<ProductPage product={productData} />}
+            />
+    
         </Routes>
 
 }
